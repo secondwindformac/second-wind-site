@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Second Wind favicon: our own ⌘ drawing (MIT) on a wind-blue tile.
+       The command symbol (U+2318) is a public glyph — no Apple trademarks. -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a84ff"/>
+      <stop offset="1" stop-color="#30b0c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#g)"/>
+  <g fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" transform="translate(6.4 6.4) scale(3.2)">
+    <circle cx="4.4" cy="4.4" r="2.3"/>
+    <circle cx="11.6" cy="4.4" r="2.3"/>
+    <circle cx="4.4" cy="11.6" r="2.3"/>
+    <circle cx="11.6" cy="11.6" r="2.3"/>
+    <path d="M6 6h4v4H6z"/>
+  </g>
+</svg>

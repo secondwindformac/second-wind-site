@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Second Wind — A second wind for your old Mac</title>
+  <meta name="description" content="Second Wind turns your 2013–2017 Intel Mac into a fast, safe, familiar computer again. Free and open source: Mac-style keyboard, Spotlight search, drivers that just work.">
+  <link rel="canonical" href="https://secondwindformac.github.io/second-wind-site/">
+  <link rel="alternate" hreflang="en" href="https://secondwindformac.github.io/second-wind-site/">
+  <link rel="alternate" hreflang="es" href="https://secondwindformac.github.io/second-wind-site/es/">
+  <link rel="alternate" hreflang="x-default" href="https://secondwindformac.github.io/second-wind-site/">
+  <meta property="og:title" content="Second Wind — A second wind for your old Mac">
+  <meta property="og:description" content="Apple stopped updating your Mac. We didn't. Free, open-source, Mac-like experience for 2013–2017 Intel Macs.">
+  <meta property="og:image" content="https://secondwindformac.github.io/second-wind-site/assets/after.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Suggestion shown only to browsers set to Spanish (dismissible) -->
+<div class="lang-banner" id="langBanner">
+  <span>🌎 Este sitio también está en español.</span>
+  <a href="es/">Ver en español</a>
+  <button id="langDismiss" aria-label="Dismiss">✕</button>
+</div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="./">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><circle cx="4.4" cy="4.4" r="2.3"/><circle cx="11.6" cy="4.4" r="2.3"/><circle cx="4.4" cy="11.6" r="2.3"/><circle cx="11.6" cy="11.6" r="2.3"/><path d="M6 6h4v4H6z"/></g></svg>
+      Second Wind
+    </a>
+    <nav class="nav-links">
+      <a href="#features">What you get</a>
+      <a href="#how">How it works</a>
+      <a href="#compat">Will it run on my Mac?</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="lang" aria-label="Language">
+      <a class="on" href="./" lang="en">EN</a>
+      <a href="es/" lang="es">ES</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>A <span class="grad">second wind</span><br>for your old Mac.</h1>
+    <p class="sub">Apple stopped updating it. We didn't. Second Wind turns your 2013–2017 Intel Mac into a fast, safe, familiar computer again — free and open source.</p>
+    <div class="cta-row">
+      <!-- from links.conf: project repo -->
+      <a class="btn btn-primary" href="https://github.com/secondwindformac/second-wind">Get Second Wind on GitHub</a>
+      <!-- from links.conf: DONATE_URL -->
+      <a class="btn btn-ghost" href="https://github.com/secondwindformac/second-wind">Support the project ♥</a>
+    </div>
+    <p class="note">Public release coming very soon — star the repo to be there on day one.</p>
+
+    <div class="compare-card">
+      <div class="titlebar"><i></i><i></i><i></i><span>The same Mac, minutes apart — drag the handle</span></div>
+      <div class="compare" id="compare" style="--pos:50%">
+        <img class="after-img" src="assets/after.png" alt="The same machine after Second Wind: dock, ⌘ menu, Mac-style theme">
+        <img class="before-img" src="assets/before.png" alt="Stock Ubuntu 24.04 desktop, before Second Wind">
+        <div class="divider"></div>
+        <span class="tag l">Before</span>
+        <span class="tag r">After Second Wind</span>
+        <input type="range" min="0" max="100" value="50" step="0.1" aria-label="Compare before and after">
+      </div>
+    </div>
+    <p class="caption">Real, unedited screenshots from our end-to-end test: stock Ubuntu 24.04 on the left, the exact same system after one run of Second Wind on the right.</p>
+  </div>
+
+  <div class="ribbon">
+    <span>🆓 Free &amp; open source</span>
+    <span>🚫 Zero telemetry</span>
+    <span>💻 MacBook Air · MacBook Pro · iMac (2013–2017, Intel)</span>
+    <span>🔒 Every download checksum-verified</span>
+  </div>
+
+  <section id="features">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Everything your fingers expect. On hardware you already own.</h2>
+        <p>Under the hood it's Ubuntu Linux — supported with security updates until 2029. On the surface, it feels like home.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><div class="ico">⌘</div><h3>Your keyboard, the Mac way</h3><p>⌘C, ⌘V, ⌘Tab, ⌘Space — every shortcut stays exactly where your fingers expect it, in every app.</p></div>
+        <div class="card"><div class="ico">🔍</div><h3>Spotlight search</h3><p>Tap ⌘ Space and type. Apps, files, calculator — instant, just like you're used to.</p></div>
+        <div class="card"><div class="ico">🖥️</div><h3>A familiar face</h3><p>The dock, the top bar with a ⌘ menu, light &amp; airy typography, a dynamic wallpaper. It looks and moves like a Mac.</p></div>
+        <div class="card"><div class="ico">📷</div><h3>Hardware that just works</h3><p>FaceTime HD camera, Wi-Fi, fan control, sleep and hibernation — set up automatically for your exact model.</p></div>
+        <div class="card"><div class="ico">🛍️</div><h3>An app store included</h3><p>21 hand-picked apps — browser, WhatsApp, Zoom, office, photos — one click each, always from official sources.</p></div>
+        <div class="card"><div class="ico">🔒</div><h3>Safe and honest</h3><p>Open source, every download verified, no telemetry, no ads. Your Mac phones nobody home.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Three steps. Zero terminal.</h2>
+        <p>You never type a command. The installer asks four simple questions and does the rest by itself.</p>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Create the USB stick</h3><p>Use our USB creator on any computer. It downloads the official Ubuntu image and prepares everything.</p></div>
+        <div class="step"><div class="num">2</div><h3>Plug it into your Mac</h3><p>Turn the Mac on holding the <strong>Option (⌥)</strong> key and pick the yellow USB drive. That's the hardest part.</p></div>
+        <div class="step"><div class="num">3</div><h3>Answer four questions</h3><p>Language, keyboard, Wi-Fi, your name. Then go make coffee — your Mac comes back reborn.</p></div>
+      </div>
+      <div class="warn">⚠️ <strong>Good to know:</strong> Second Wind replaces macOS completely — it's designed for Macs that Apple left behind. Back up your files first; the installer warns you clearly before touching the disk.</div>
+    </div>
+  </section>
+
+  <section id="compat">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Will it run on my Mac?</h2>
+        <p>Built for the Intel Macs Apple stopped updating. Find your model — the year is on the back of the machine, or in <em> → About This Mac</em>.</p>
+      </div>
+      <div class="tablewrap">
+        <table>
+          <tr><th>Your Mac</th><th>Years</th><th>Status</th></tr>
+          <tr><td>MacBook Air 11″ / 13″</td><td>2013 – 2017</td><td class="ok">✓ Ready today</td></tr>
+          <tr><td>MacBook Pro Retina 13″ / 15″</td><td>2013 – 2015</td><td class="ok">✓ Ready today</td></tr>
+          <tr><td>iMac 21.5″ / 27″</td><td>2013 – 2015</td><td class="ok">✓ Ready today</td></tr>
+          <tr><td>MacBook Pro 13″ / 15″ (Touch Bar era)</td><td>2016 – 2017</td><td class="soon">◐ In progress</td></tr>
+          <tr><td>Any Mac with Apple T2 chip</td><td>2018 +</td><td class="no">— Not yet (v2)</td></tr>
+          <tr><td>Apple Silicon (M1 and later)</td><td>2020 +</td><td class="no">— Not planned (still supported by Apple)</td></tr>
+        </table>
+      </div>
+      <p class="tablenote">Full technical matrix, model by model: <a href="https://github.com/secondwindformac/second-wind/blob/main/docs/compatibility.md">docs/compatibility.md</a></p>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head"><h2>Questions people actually ask</h2></div>
+      <div class="faq">
+        <details><summary>Is it really free?</summary><p>Yes. The installer is open source (MIT) and free forever. Later we'll offer optional paid extras — a Mac app that builds the USB for you, priority support — but the full experience above costs nothing.</p></details>
+        <details><summary>Will I lose macOS and my files?</summary><p>Yes — Second Wind replaces macOS entirely with Ubuntu Linux. It's meant for Macs that no longer receive Apple updates. Back up your files first (the installer reminds you before touching anything).</p></details>
+        <details><summary>Is this legal? Is it a hack?</summary><p>It's not a hack. Second Wind installs Ubuntu, a mainstream free operating system, plus open-source components. Nothing from Apple is copied or redistributed. It's your hardware — you're allowed to run what you want on it.</p></details>
+        <details><summary>Why not just keep using old macOS?</summary><p>Without security updates, browsers and banking sites gradually stop working — and staying online gets risky. Ubuntu 24.04 receives security updates until 2029, and modern apps (Chrome, WhatsApp, Zoom) run on it today.</p></details>
+        <details><summary>I'm not technical. Honestly — can I do this?</summary><p>That's exactly who we built it for. If you can plug in a USB stick and hold down one key, you can do this. You never see a terminal, and every step explains itself in plain language, in English or Spanish.</p></details>
+        <details><summary>Can I go back to macOS later?</summary><p>Yes — macOS can be reinstalled from Apple's own recovery (Internet Recovery, ⌘⌥R at power-on) or from a macOS USB stick, on any of these models. Your files must come from your backup.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta-band">
+    <h2>Give your Mac its second wind.</h2>
+    <p>Don't send a perfectly good machine to a drawer — or a landfill.</p>
+    <div class="cta-row">
+      <!-- from links.conf: project repo -->
+      <a class="btn btn-primary" href="https://github.com/secondwindformac/second-wind">Get Second Wind on GitHub</a>
+      <!-- from links.conf: SUPPORT_URL -->
+      <a class="btn btn-ghost" href="https://github.com/secondwindformac/second-wind/issues">Get help</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-row">
+      <!-- from links.conf: WEBSITE_URL(repo) / SUPPORT_URL / DONATE_URL -->
+      <a href="https://github.com/secondwindformac/second-wind">GitHub</a>
+      <a href="https://github.com/secondwindformac/second-wind/issues">Support</a>
+      <a href="https://github.com/secondwindformac/second-wind">Donate</a>
+      <a href="es/">Español</a>
+    </div>
+    <p class="legal">
+      © <span id="y">2026</span> Second Wind. Free software, made with care for machines that deserve better.<br>
+      Mac, macOS and MacBook are trademarks of Apple Inc. Ubuntu is a trademark of Canonical Ltd.
+      Second Wind is an independent project — not affiliated with, endorsed by, or sponsored by Apple or Canonical.
+      Model names are used only to describe compatibility.
+    </p>
+  </div>
+</footer>
+
+<script>
+  // Before/after slider
+  var cmp = document.getElementById('compare');
+  cmp.querySelector('input').addEventListener('input', function () {
+    cmp.style.setProperty('--pos', this.value + '%');
+  });
+  // Offer Spanish to Spanish-language browsers (once)
+  try {
+    var wantsEs = (navigator.languages || [navigator.language || '']).some(function (l) { return /^es/i.test(l); });
+    if (wantsEs && !localStorage.getItem('sw-lang-dismiss')) {
+      document.getElementById('langBanner').style.display = 'flex';
+    }
+    document.getElementById('langDismiss').addEventListener('click', function () {
+      document.getElementById('langBanner').style.display = 'none';
+      localStorage.setItem('sw-lang-dismiss', '1');
+    });
+  } catch (e) {}
+  document.getElementById('y').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
