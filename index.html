@@ -76,7 +76,7 @@
     <h1>A <span class="grad">second wind</span><br>for your old Mac.</h1>
     <p class="sub">Apple stopped updating it. We didn't. Second Wind turns your 2013–2017 Intel Mac into a fast, safe, familiar computer again — free forever, with all the code in plain sight.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#waitlist">Join the waitlist</a>
+      <a class="btn btn-primary" href="#demos">See it work</a>
       <!-- from links.conf: DONATE_URL -->
       <a class="btn btn-ghost" href="https://ko-fi.com/secondwindformac">Support the project ♥</a>
     </div>
@@ -149,7 +149,7 @@
       <p>Turn it on one more time. In 30 minutes it can be <strong>your kid's first computer</strong>, your mom's window to the grandkids, or the tool of someone who could never afford one.</p>
       <p>Every year, millions of perfectly good Macs end up as electronic waste — while millions of kids do their homework on a phone, or not at all. <strong>We exist to cross those two lines.</strong></p>
       <div class="cta-row">
-        <a class="btn btn-primary" href="#waitlist">Give one a second life</a>
+        <a class="btn btn-primary" href="#how">Give one a second life</a>
       </div>
     </div>
   </section>
@@ -206,37 +206,11 @@
     </div>
   </section>
 
-  <section id="waitlist">
-    <div class="wrap">
-      <div class="sec-head">
-        <h2>Be first when it launches.</h2>
-        <p>Leave your email and we'll send you exactly one message: the day Second Wind is ready to download. No account, no spam, unsubscribe with one click.</p>
-      </div>
-      <form class="wl-form" id="wlForm">
-        <input type="email" name="email" required maxlength="120" placeholder="you@email.com" aria-label="Email">
-        <p class="wl-q">Who would you revive this Mac for?</p>
-        <div class="wl-opts">
-          <label><input type="radio" name="whofor" value="Para mí / For me" required><span>For me</span></label>
-          <label><input type="radio" name="whofor" value="Para mis hijos / For my kids"><span>For my kids</span></label>
-          <label><input type="radio" name="whofor" value="Para mis papás / For my parents"><span>For my parents</span></label>
-          <label><input type="radio" name="whofor" value="Para regalar o vender / To gift or sell"><span>To gift or sell</span></label>
-          <label><input type="radio" name="whofor" value="Otro / Other"><span>Other</span></label>
-        </div>
-        <input type="text" name="model" maxlength="80" placeholder="Which Mac do you have? (optional — e.g. MacBook Air 2014)" aria-label="Mac model">
-        <input type="text" name="website" class="wl-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <input type="hidden" name="lang" value="en">
-        <button class="btn btn-primary" type="submit">Join the waitlist →</button>
-        <p class="wl-done" hidden>🎉 You're on the list! One email on launch day — that's all.</p>
-        <p class="wl-err" hidden>Something hiccuped — please try again in a minute.</p>
-      </form>
-    </div>
-  </section>
-
   <div class="cta-band">
     <h2>Give your Mac its second wind.</h2>
     <p>Don't send a perfectly good machine to a drawer — or a landfill.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="#waitlist">Join the waitlist</a>
+      <a class="btn btn-primary" href="#demos">See it work</a>
       <!-- from links.conf: DONATE_URL -->
       <a class="btn btn-ghost" href="https://ko-fi.com/secondwindformac">Support the project ♥</a>
     </div>
@@ -279,24 +253,6 @@
     });
   } catch (e) {}
   document.getElementById('y').textContent = new Date().getFullYear();
-  // Waitlist → Apps Script → the founder's own spreadsheet
-  var wf = document.getElementById('wlForm');
-  if (wf) wf.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var btn = wf.querySelector('button');
-    btn.disabled = true;
-    fetch('https://script.google.com/macros/s/AKfycbz5DJkE8iG2_4_1On7aIUtZ3o_2SZd-pU8F51LzRLvWDoRRVdPNXMhEfBI9FOqjmk-f/exec',
-          { method: 'POST', mode: 'no-cors', body: new FormData(wf) })
-      .then(function () {
-        Array.prototype.forEach.call(wf.querySelectorAll('input, .wl-q, .wl-opts, button'),
-          function (el) { el.style.display = 'none'; });
-        wf.querySelector('.wl-done').hidden = false;
-      })
-      .catch(function () {
-        wf.querySelector('.wl-err').hidden = false;
-        btn.disabled = false;
-      });
-  });
 </script>
 </body>
 </html>
