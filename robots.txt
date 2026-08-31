@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /download/
+Disallow: /es/download/
+
+Sitemap: https://secondwindformac.com/sitemap.xml

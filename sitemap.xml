@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://secondwindformac.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/rescue/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/rescue/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/rescue/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/es/rescue/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/rescue/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/rescue/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>
