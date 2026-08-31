@@ -3,7 +3,7 @@
 Landing page for [Second Wind](https://github.com/secondwindformac/second-wind) —
 "A second wind for your old Mac". Static site, GitHub Pages, no build step.
 
-**Live:** https://secondwindformac.github.io/second-wind-site/ · Spanish: [`/es/`](https://secondwindformac.github.io/second-wind-site/es/)
+**Live:** https://secondwindformac.com/ · Spanish: [`/es/`](https://secondwindformac.com/es/)
 
 ## Structure
 
@@ -26,19 +26,14 @@ Button URLs mirror `links.conf` in the main repo (marked with `<!-- from links.c
 comments). When a real donate/support channel exists, update `links.conf` there and the
 marked hrefs here in the same commit.
 
-## Custom domain — secondwindformac.com (2-step activation)
+## Custom domain — secondwindformac.com (CONNECTED 2026-08-30)
 
-The domain is chosen but activates only after purchase (Porkbun or Cloudflare, ~US$10/yr).
-Doing it earlier would break the github.io URL. The day it's bought:
-
-1. **DNS at the registrar**: `A` records for the apex → `185.199.108.153`,
-   `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and a `CNAME` for
-   `www` → `secondwindformac.github.io`.
-2. **This repo**: add a file named `CNAME` containing exactly `secondwindformac.com`,
-   then in repo Settings → Pages set the custom domain and tick **Enforce HTTPS**
-   (cert takes ~15 min). Finally replace `secondwindformac.github.io/second-wind-site`
-   with `secondwindformac.com` in every `canonical`/`hreflang`/`og:` URL here, and
-   point `WEBSITE_URL` in the main repo's `links.conf` at the new domain.
+Registrar: domains.com. DNS: 4 apex `A` records → `185.199.108.153/.109/.110/.111`
+and `CNAME www` → `secondwindformac.github.io`. This repo carries the `CNAME` file
+(that is what keeps the custom domain across Pages builds — do not delete it),
+every `canonical`/`hreflang`/`og:` URL points at the domain, and the main repo's
+`links.conf` `WEBSITE_URL` does too. HTTPS is enforced (Let's Encrypt via Pages).
+The old `secondwindformac.github.io/second-wind-site` URLs 301-redirect here.
 
 ## License
 
