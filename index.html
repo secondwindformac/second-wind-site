@@ -186,10 +186,23 @@
         <h2>Be first when it launches.</h2>
         <p>Leave your email and we'll send you exactly one message: the day Second Wind is ready to download. No account, no spam, unsubscribe with one click.</p>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="FORM_URL_PLACEHOLDER" target="_blank" rel="noopener">Join the waitlist →</a>
-      </div>
-      <p class="tablenote">One question inside helps us build the right thing: who is this Mac for?</p>
+      <form class="wl-form" id="wlForm">
+        <input type="email" name="email" required maxlength="120" placeholder="you@email.com" aria-label="Email">
+        <p class="wl-q">Who would you revive this Mac for?</p>
+        <div class="wl-opts">
+          <label><input type="radio" name="whofor" value="Para mí / For me" required><span>For me</span></label>
+          <label><input type="radio" name="whofor" value="Para mis hijos / For my kids"><span>For my kids</span></label>
+          <label><input type="radio" name="whofor" value="Para mis papás / For my parents"><span>For my parents</span></label>
+          <label><input type="radio" name="whofor" value="Para regalar o vender / To gift or sell"><span>To gift or sell</span></label>
+          <label><input type="radio" name="whofor" value="Otro / Other"><span>Other</span></label>
+        </div>
+        <input type="text" name="model" maxlength="80" placeholder="Which Mac do you have? (optional — e.g. MacBook Air 2014)" aria-label="Mac model">
+        <input type="text" name="website" class="wl-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="lang" value="en">
+        <button class="btn btn-primary" type="submit">Join the waitlist →</button>
+        <p class="wl-done" hidden>🎉 You're on the list! One email on launch day — that's all.</p>
+        <p class="wl-err" hidden>Something hiccuped — please try again in a minute.</p>
+      </form>
     </div>
   </section>
 
@@ -239,6 +252,24 @@
     });
   } catch (e) {}
   document.getElementById('y').textContent = new Date().getFullYear();
+  // Waitlist → Apps Script → the founder's own spreadsheet
+  var wf = document.getElementById('wlForm');
+  if (wf) wf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = wf.querySelector('button');
+    btn.disabled = true;
+    fetch('https://script.google.com/macros/s/AKfycbz5DJkE8iG2_4_1On7aIUtZ3o_2SZd-pU8F51LzRLvWDoRRVdPNXMhEfBI9FOqjmk-f/exec',
+          { method: 'POST', mode: 'no-cors', body: new FormData(wf) })
+      .then(function () {
+        Array.prototype.forEach.call(wf.querySelectorAll('input, .wl-q, .wl-opts, button'),
+          function (el) { el.style.display = 'none'; });
+        wf.querySelector('.wl-done').hidden = false;
+      })
+      .catch(function () {
+        wf.querySelector('.wl-err').hidden = false;
+        btn.disabled = false;
+      });
+  });
 </script>
 </body>
 </html>

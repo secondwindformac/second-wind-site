@@ -179,10 +179,23 @@
         <h2>Sé el primero cuando lancemos.</h2>
         <p>Déjanos tu correo y te enviaremos exactamente un mensaje: el día que Second Wind esté listo para descargar. Sin cuenta, sin spam, te sales con un clic.</p>
       </div>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="FORM_URL_PLACEHOLDER" target="_blank" rel="noopener">Unirme a la lista →</a>
-      </div>
-      <p class="tablenote">Adentro hay una pregunta que nos ayuda a construir lo correcto: ¿para quién es este Mac?</p>
+      <form class="wl-form" id="wlForm">
+        <input type="email" name="email" required maxlength="120" placeholder="tu@correo.com" aria-label="Correo">
+        <p class="wl-q">¿Para quién revivirías este Mac?</p>
+        <div class="wl-opts">
+          <label><input type="radio" name="whofor" value="Para mí / For me" required><span>Para mí</span></label>
+          <label><input type="radio" name="whofor" value="Para mis hijos / For my kids"><span>Para mis hijos</span></label>
+          <label><input type="radio" name="whofor" value="Para mis papás / For my parents"><span>Para mis papás</span></label>
+          <label><input type="radio" name="whofor" value="Para regalar o vender / To gift or sell"><span>Para regalar o vender</span></label>
+          <label><input type="radio" name="whofor" value="Otro / Other"><span>Otro</span></label>
+        </div>
+        <input type="text" name="model" maxlength="80" placeholder="¿Qué Mac tienes? (opcional — ej: MacBook Air 2014)" aria-label="Modelo de Mac">
+        <input type="text" name="website" class="wl-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="lang" value="es">
+        <button class="btn btn-primary" type="submit">Unirme a la lista →</button>
+        <p class="wl-done" hidden>🎉 ¡Estás en la lista! Un solo correo el día del lanzamiento — nada más.</p>
+        <p class="wl-err" hidden>Algo falló — inténtalo de nuevo en un minuto.</p>
+      </form>
     </div>
   </section>
 
@@ -220,6 +233,24 @@
     cmp.style.setProperty('--pos', this.value + '%');
   });
   document.getElementById('y').textContent = new Date().getFullYear();
+  // Waitlist → Apps Script → la hoja de cálculo del fundador
+  var wf = document.getElementById('wlForm');
+  if (wf) wf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = wf.querySelector('button');
+    btn.disabled = true;
+    fetch('https://script.google.com/macros/s/AKfycbz5DJkE8iG2_4_1On7aIUtZ3o_2SZd-pU8F51LzRLvWDoRRVdPNXMhEfBI9FOqjmk-f/exec',
+          { method: 'POST', mode: 'no-cors', body: new FormData(wf) })
+      .then(function () {
+        Array.prototype.forEach.call(wf.querySelectorAll('input, .wl-q, .wl-opts, button'),
+          function (el) { el.style.display = 'none'; });
+        wf.querySelector('.wl-done').hidden = false;
+      })
+      .catch(function () {
+        wf.querySelector('.wl-err').hidden = false;
+        btn.disabled = false;
+      });
+  });
 </script>
 </body>
 </html>
