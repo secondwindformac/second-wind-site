@@ -10,6 +10,9 @@ Landing page for [Second Wind](https://github.com/secondwindformac/second-wind) 
 ```
 index.html        English (default language)
 es/index.html     Spanish
+compatibility/    "Will my Mac work?" checker (es/compatibilidad/)
+download/         Download page (es/download/)
+rescue/           Rescue card (es/rescue/)
 styles.css        Shared styles (light + dark via prefers-color-scheme)
 assets/           Screenshots (real E2E test run), favicon
 ```
@@ -23,8 +26,10 @@ assets/           Screenshots (real E2E test run), favicon
 ## Buttons ↔ links.conf
 
 Button URLs mirror `links.conf` in the main repo (marked with `<!-- from links.conf: KEY -->`
-comments). When a real donate/support channel exists, update `links.conf` there and the
-marked hrefs here in the same commit.
+comments): donations → `DONATE_URL` (Ko-fi), support → `CONTACT_EMAIL`
+(hello@secondwindformac.com). If they change, update `links.conf` there and the
+marked hrefs here in the same commit. Nothing a normal visitor clicks for help
+should lead to GitHub.
 
 ## Custom domain — secondwindformac.com (CONNECTED 2026-08-30)
 
