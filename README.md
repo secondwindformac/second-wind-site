@@ -26,7 +26,7 @@ assets/           Screenshots (real E2E test run), favicon
 ## Buttons ↔ links.conf
 
 Button URLs mirror `links.conf` in the main repo (marked with `<!-- from links.conf: KEY -->`
-comments): donations → `DONATE_URL` (Ko-fi), support → `CONTACT_EMAIL`
+comments): pay what you want → `DONATE_URL` (Lemon Squeezy), help → `CONTACT_EMAIL`
 (hello@secondwindformac.com). If they change, update `links.conf` there and the
 marked hrefs here in the same commit. Nothing a normal visitor clicks for help
 should lead to GitHub.
