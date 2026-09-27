@@ -19,29 +19,117 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Second Wind",
-    "url": "https://secondwindformac.com/",
-    "description": "Second Wind turns a 2013-2017 Intel Mac into a fast, safe, familiar computer again: Ubuntu underneath, the Mac look, drivers that just work and an app store on top. Free forever, all the code in plain sight. Optional Mac Experience (⌘ shortcuts and ⌘Space search): 30 days free, then US$10 once.",
-    "operatingSystem": "Installs Ubuntu 24.04 LTS on 2013-2017 Intel Macs",
-    "applicationCategory": "UtilitiesApplication",
-    "offers": {
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Second Wind",
+  "url": "https://secondwindformac.com/",
+  "description": "Second Wind turns a 2013-2017 Intel Mac into a fast, safe, familiar computer again: Ubuntu underneath, the Mac look, drivers that just work and an app store on top. Free forever, all the code in plain sight. Optional Mac Experience (⌘ shortcuts and ⌘Space search): 30 days free, then US$10 once.",
+  "operatingSystem": "Installs Ubuntu 24.04 LTS on 2013-2017 Intel Macs",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": [
+    {
       "@type": "Offer",
+      "name": "Second Wind",
       "price": "0",
-      "priceCurrency": "USD"
+      "priceCurrency": "USD",
+      "description": "Free forever: Mac look, drivers, app store and updates."
     },
-    "softwareHelp": {
-      "@type": "CreativeWork",
-      "url": "https://secondwindformac.com/rescue/"
-    },
-    "sameAs": [
-      "https://github.com/secondwindformac/second-wind"
-    ]
-  }
+    {
+      "@type": "Offer",
+      "name": "Mac Experience",
+      "price": "10",
+      "priceCurrency": "USD",
+      "description": "Optional one-time purchase (not a subscription) after a 30-day free trial: ⌘ keyboard shortcuts and ⌘Space search."
+    }
+  ],
+  "softwareHelp": {
+    "@type": "CreativeWork",
+    "url": "https://secondwindformac.com/rescue/"
+  },
+  "sameAs": [
+    "https://github.com/secondwindformac/second-wind"
+  ],
+  "isAccessibleForFree": true,
+  "inLanguage": [
+    "en",
+    "es"
+  ]
+}
   </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "4829b0f439ff4244b7309ff38470c616"}'></script><!-- End Cloudflare Web Analytics -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Do I need to create an account?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No, and you never will. Second Wind has no accounts by design: you download, you install, done. If you buy the optional Mac Experience, your license key arrives by email: paste it into the Second Wind app and that's it. Less friction for you, less data for anyone to worry about."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is it really free?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes, and we're precise about it. Second Wind is free forever: the Mac look, drivers that just work (Wi-Fi, camera, sound), the app store and updates, with all the code published in plain sight, auditable by anyone. No terminal, ever. One optional extra exists: the “Mac Experience” (⌘ shortcuts everywhere and ⌘Space search) is free for the first 30 days, then a one-time US$10 (once per Mac, yours forever). If you don't buy it, your Mac keeps working and looking exactly the same; only the ⌘ shortcuts and ⌘Space go back to Linux's. No subscriptions, no accounts. Want to help more? You can pay what you want for Second Wind."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Will I lose macOS and my files?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Second Wind replaces macOS entirely with Ubuntu Linux. It's meant for Macs that no longer receive Apple updates. Back up your files first (the installer reminds you before touching anything)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Is this legal? Is it a hack?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "It's not a hack. Second Wind installs Ubuntu, a mainstream free operating system, plus components downloaded from their official sources. Nothing from Apple is copied or redistributed. It's your hardware, and you're allowed to run what you want on it."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why not just keep using old macOS?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Without security updates, browsers and banking sites gradually stop working, and staying online gets risky. Ubuntu 24.04 receives security updates until 2029, and modern apps (Chrome, WhatsApp, Zoom) run on it today."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "I'm not technical. Honestly, can I do this?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "That's exactly who we built it for. If you can plug in a USB stick and hold down one key, you can do this. You never see a terminal, and every step explains itself in plain language, in English or Spanish."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Something isn't working. How do I get help?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Open the Second Wind app (in the dock) → ⋯ → Your Mac. It checks Wi-Fi, sound, camera, keyboard, Bluetooth and battery, and shows a short report about your Mac. Click Copy report for support and paste it into an email to hello@secondwindformac.com. You see everything it contains first, and nothing is sent anywhere unless you send it yourself."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I go back to macOS later?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. macOS can be reinstalled from Apple's own recovery (Internet Recovery, ⌘⌥R at power-on) or from a macOS USB stick, on any of these models. Your files must come from your backup."
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -222,6 +310,7 @@
     <div class="foot-row">
       <!-- from links.conf: CONTACT_EMAIL / DONATE_URL -->
       <a href="mailto:hello@secondwindformac.com">Support</a>
+      <a href="compare/">Compare options</a>
       <a href="https://github.com/secondwindformac/second-wind">The code, in plain sight</a>
       <a href="https://secondwindformac.lemonsqueezy.com/checkout/buy/3c55c042-ea20-4f09-9795-8f4e3b5bd2de">Support</a>
       <a href="es/">Español</a>

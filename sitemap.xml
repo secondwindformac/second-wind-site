@@ -29,4 +29,46 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://secondwindformac.com/compare/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/compare/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/comparar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/es/comparar/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/compare/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/comparar/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/compatibility/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/compatibilidad/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/es/compatibilidad/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/compatibility/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/compatibilidad/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/download/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/download/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/download/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://secondwindformac.com/es/download/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://secondwindformac.com/download/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://secondwindformac.com/es/download/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

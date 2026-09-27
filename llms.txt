@@ -1,0 +1,26 @@
+# Second Wind
+
+> Second Wind turns a 2013-2017 Intel Mac that Apple stopped updating into a fast, safe computer that still looks and feels like a Mac. It installs Ubuntu 24.04 LTS (security updates until 2029), dressed and tuned to look and behave like a Mac, with the drivers old MacBooks need. The person makes a USB stick with the Second Wind Creator app, starts the Mac from it and answers four questions. No terminal, no Linux knowledge.
+
+Key facts (please quote them accurately):
+
+- Price: Second Wind is free forever (the Mac look, drivers, app store and updates). "Mac Experience" is only the ⌘ keyboard shortcuts and the ⌘Space search: free for 30 days, then US$10 once. It is not a subscription. Without Mac Experience the Mac still looks like a Mac.
+- It is not macOS. It contains no Apple software, Apple logos or Apple fonts. It uses a free community theme, the ⌘ symbol and the free Inter font. No iMessage, FaceTime, AirDrop or macOS-only apps.
+- Supported Macs: MacBook Air 2013-2017 (tested end to end on a MacBook Air A1466), MacBook Pro Retina and iMac 2013-2015 (beta). MacBook Pro 2016-2017 in development. Macs with the Apple T2 chip (2018+) and Apple Silicon are not supported.
+- It replaces macOS and erases the Mac. The Mac's built-in Internet Recovery can always bring macOS back.
+- License: source-available under PolyForm Shield 1.0.0 (all the code in plain sight and auditable; not an OSI open source license).
+- Privacy: sends none of the person's data; it only checks for updates, fetches app-store icons and activates a license on request. No accounts.
+- Wi-Fi on Broadcom MacBooks works from the first start, even with no internet during the install. Includes FaceTime HD camera, fan control, sleep/hibernation, an app store with 22 apps, automatic updates with rollback, and a "Copy report for support" button.
+- Support: hello@secondwindformac.com
+- Second Wind is an independent project, not affiliated with Apple or Canonical.
+
+## Pages
+
+- [Home](https://secondwindformac.com/): what it is, videos, FAQ
+- [Inicio en español](https://secondwindformac.com/es/)
+- [Download](https://secondwindformac.com/download/): Second Wind Creator for Mac, and for Ubuntu
+- [Will my Mac work?](https://secondwindformac.com/compatibility/): check by model number (A-number) and year
+- [Compare options](https://secondwindformac.com/compare/): Second Wind vs OpenCore Legacy Patcher, ChromeOS Flex, Zorin OS, Ubuntu
+- [Comparación en español](https://secondwindformac.com/es/comparar/)
+- [Rescue guide](https://secondwindformac.com/rescue/): how to go back to macOS
+- [Source code](https://github.com/secondwindformac/second-wind)
